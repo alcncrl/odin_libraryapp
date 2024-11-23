@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Library</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="top_header">
+      <div class="logo">
+        <h1>Library App</h1>
+      </div>
+      <div class="search_bar">
+        <img src="./icons/magnify.svg" alt="" class="search_img" />
+        <input type="text" name="search" id="search" placeholder="Search" />
+      </div>
+      <div>
+        <button id="showDialog">New Book</button>
+      </div>
+    </div>
+    <div class="filter-container">
+      <div class="left-bar">
+        <p>BOOKS</p>
+      </div>
+      <div class="right-bar">
+        <p>SELECT FILTER:</p>
+        <button id="filter-btn-unread">Unread</button>
+        <button id="filter-btn-read">Read</button>
+      </div>
+    </div>
+    <!-- Modal Starts Here -->
+    <dialog id="addDialog">
+      <form id="add-form">
+        <h1>Add Book</h1>
+        <div>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Title"
+            class="increase-size"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name="author"
+            id="author"
+            placeholder="Author"
+            class="increase-size"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="number"
+            name="pages"
+            id="pages"
+            placeholder="Pages"
+            class="increase-size"
+            required
+          />
+        </div>
+        <div>
+          <label for="read">Have you read it?</label>
+          <input type="checkbox" name="read" id="read" />
+        </div>
+        <div>
+          <button id="close-btn" formmethod="dialog">Close</button>
+          <button type="submit" id="add-btn">Add Book</button>
+        </div>
+      </form>
+    </dialog>
+    <!-- Modal Ends Here -->
+    <div class="main_container">
+      <!-- Auto Generate -->
+    </div>
+    <div class="footer">
+      <p>
+        Created by Exkalibur |
+        <a href="https://www.theodinproject.com/" target="_blank"
+          >Odin Project</a
+        >
+      </p>
+    </div>
+  </body>
+</html>

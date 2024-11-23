@@ -1,0 +1,258 @@
+:root {
+  --primaryColor: #fafaf9;
+  --backgroundColor: #e2e8f0;
+  --inputBgClr: #e4e4e7;
+  --borderColor: #a1a1aa;
+  --readAccent: #16a34a;
+  --unreadAccent: #dc2626;
+  --buttonAccent: #171717;
+  --buttonHover: #3f3f46;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 5fr;
+  grid-template-rows: 120px 50px 5fr 50px;
+
+  min-height: 100vh;
+  font-family: 'Lato', Courier, monospace, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--backgroundColor);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* STYLE STARTS HERE */
+
+.top_header {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  gap: 12px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: var(--primaryColor);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.top_header div {
+  display: flex;
+  align-self: center;
+  gap: 8px;
+}
+
+.top_header button {
+  font-size: 16px;
+  padding: 6px 36px;
+  border: none;
+  border-radius: 8px;
+  color: var(--primaryColor);
+  background-color: var(--buttonAccent);
+}
+
+.logo img {
+  height: 70px;
+}
+.search_bar input {
+  width: 350px;
+}
+.search_img {
+  height: 32px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 24px 0px 24px;
+}
+
+.left-bar,
+.right-bar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 8px;
+}
+
+.main_container {
+  display: grid;
+  grid-template-columns: repeat(5, 230px);
+  justify-content: center;
+  gap: 24px;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  padding: 12px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--primaryColor);
+  padding: 12px;
+  height: 250px;
+  width: 230px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.book-card h3,
+.book-details p {
+  text-align: center;
+}
+
+.book-card h3 {
+  flex: 1;
+}
+
+.book-card img:hover {
+  transform: translateY(-5px);
+}
+
+.book-details p {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.card-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-controls img {
+  width: auto;
+  height: 30px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-color: var(--primaryColor);
+}
+
+.read {
+  border-left: 8px solid var(--readAccent);
+}
+
+.unread {
+  border-left: 8px solid var(--unreadAccent);
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+}
+
+.active {
+  background-color: var(--buttonHover);
+}
+
+.increase-size {
+  height: 32px;
+  width: 240px;
+}
+
+dialog {
+  border: 2px solid var(--borderColor);
+  height: 400px;
+  width: 320px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--buttonHover);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+}
+
+form button,
+.filter-container button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 36px;
+  font-size: 12px;
+  color: var(--primaryColor);
+  background-color: var(--buttonAccent);
+}
+
+button:hover {
+  background-color: var(--buttonHover);
+}
+
+h1,
+h3 {
+  align-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  border: none;
+  border-radius: 8px;
+  padding-left: 8px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  background-color: var(--inputBgClr);
+}
+
+label,
+input {
+  font-size: 12px;
+}
